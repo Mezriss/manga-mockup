@@ -7,6 +7,7 @@
     "build": "webpack --env=dev --progress --profile --colors",
     "build:watch": "webpack --env=dev --progress --profile --colors --watch",
     "build:prod": "webpack --env=prod --progress --profile --colors -p",
+    "serve": "serve docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mezriss",
@@ -14,13 +15,17 @@
   "dependencies": {
     "css-loader": "^0.28.8",
     "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "font-awesome": "^4.7.0",
     "normalize.css": "^7.0.0",
     "postcss-loader": "^2.0.10",
-    "precss": "^2.0.0",
+    "postcss-nested": "^3.0.0",
     "style-loader": "^0.19.1",
-    "typebase.css": "^0.5.0"
+    "typebase.css": "^0.5.0",
+    "url-loader": "^0.6.2"
   },
   "devDependencies": {
+    "serve": "^6.4.8",
     "webpack": "^3.10.0"
   }
 }

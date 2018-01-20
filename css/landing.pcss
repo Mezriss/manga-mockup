@@ -1,17 +1,89 @@
 .content.landing {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 20px;
+	grid-gap: 3rem;
+
+	h2 {
+		display: block;
+		text-align: center;
+		font-size: 1.5rem;
+		line-height: 1.5;
+		margin: 2rem 0 0;
+		border-bottom: 2px solid var(--clr-key);
+	}
 
 
 	.featured {
 		grid-column: 1;
+		a {
+			position: relative;
+			display: block;
+		}
 		img {
 			width: 100%;
 			height: auto;
+		}
+		.description {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			padding: 2rem;
+
+			color: var(--clr-key);
+			background: var(--clr-overlay-bright);
+			text-decoration: none;
+			font-size: 0.9rem;
+
+			h3 {
+				text-align: center;
+				font-size: 1.2rem;
+			}
+		}
+		&:hover .description {
+			display: block;
+		}
+	}
+	.trending {
+		ul {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			justify-content: space-between;
+
+			li {
+				width: 19%;
+			}
+
+			a {
+				text-decoration: none;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.status {
+		p, li {
+			font-size: 0.9rem;
+		}
+		.signature {
+			font-size: 0.7em;
+			float: right;
+			color: var(--clr-background);
+			background: var(--clr-key);
+			padding: 0.15rem 0.30rem;
+			border-radius: 3px;
+			clear: both;
 		}
 	}
 	.news {
 		grid-column: 2;
 	}
+
 }

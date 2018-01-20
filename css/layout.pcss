@@ -25,7 +25,6 @@ body {
 			flex-grow: 0;
 			min-width: 600px;
 			max-width: 90%;
-
 		}
 	}
 	.title-controls {
@@ -36,12 +35,15 @@ body {
 		flex-wrap: wrap;
 		align-items: flex-end;
 
+		a {
+			text-decoration: none;
+		}
+
 		h1 {
 			white-space: nowrap;
 			margin: 0;
 			font-size: 4rem;
 			line-height: 3rem;
-			cursor: default;
 			&:hover {
 				color: var(--clr-rnd-1);
 				animation: colorwheel 1.5s infinite;
@@ -78,8 +80,6 @@ body {
 					display: block;
 					padding: 5px 10px 2px;
 					color: var(--clr-background);
-
-					text-decoration: none;
 				}
 			}
 		}

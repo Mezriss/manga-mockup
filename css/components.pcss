@@ -1,0 +1,58 @@
+
+.carousel {
+	overflow: hidden;
+	position: relative;
+
+	.back, .forward {
+		opacity: 0;
+		transition: 0.2s;
+		cursor: pointer;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		font-size: 1.5rem;
+
+		padding: 0 0.5rem;
+		z-index: 2;
+		top: 25%;
+		height: 50%;
+		background: var(--clr-background-tr-dark);
+		color: var(--clr-background);
+	}
+	&:hover {
+		.back, .forward {
+			opacity: 1;
+		}
+	}
+	.back {
+		left: 0;
+		border-radius: 0 3px 3px 0;
+	}
+	.forward {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+
+	ul {
+		position: absolute;
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		justify-content: space-between;
+
+		li {
+			&:last-child {
+				margin: 0;
+			}
+		}
+
+		a {
+			text-decoration: none;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 .content.landing {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr 2fr;
 	grid-gap: 3rem;
 
 	h2 {
@@ -8,13 +8,18 @@
 		text-align: center;
 		font-size: 1.5rem;
 		line-height: 1.5;
-		margin: 2rem 0 0;
+		margin: 1rem 0 0;
 		border-bottom: 2px solid var(--clr-key);
 	}
 
+	.sidebar {
+		grid-column: 1;
+	}
+	.main {
+		grid-column: 2;
+	}
 
 	.featured {
-		grid-column: 1;
 		a {
 			position: relative;
 			display: block;
@@ -33,7 +38,7 @@
 			padding: 2rem;
 
 			color: var(--clr-key);
-			background: var(--clr-overlay-bright);
+			background: var(--clr-background-tr-bright);
 			text-decoration: none;
 			font-size: 0.9rem;
 
@@ -47,24 +52,15 @@
 		}
 	}
 	.trending {
-		ul {
-			display: flex;
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			justify-content: space-between;
-
+		.carousel {
+			height: 250px;
 			li {
-				width: 19%;
+				margin-right: 15px;
 			}
-
-			a {
-				text-decoration: none;
-			}
-			img {
-				width: 100%;
-				height: auto;
-			}
+		}
+		img {
+			height: 250px;
+			width: auto;
 		}
 	}
 
@@ -82,8 +78,49 @@
 			clear: both;
 		}
 	}
-	.news {
-		grid-column: 2;
+	.recent {
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				display: grid;
+				grid-gap: 0.5rem;
+				grid-template-columns: 1fr 1fr 1rem 0.5fr 4rem;
+				&:nth-child(2n) {
+					background: var(--clr-background-list-row);
+				}
+
+				font-size: 0.8rem;
+
+				a, span {
+					display: block;
+				}
+				a {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+
+				.series {
+					grid-column: 1;
+					font-weight: bold;
+				}
+				.chapter {
+					grid-column: 2;
+				}
+				.language {
+					grid-column: 3;
+				}
+				.group {
+					grid-column: 4;
+				}
+				.date {
+					grid-column: 5;
+				}
+			}
+		}
 	}
 
 }

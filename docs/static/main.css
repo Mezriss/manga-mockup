@@ -3055,8 +3055,9 @@ input:focus {
 
 .header .title-controls ul {
 			display: flex;
-			align-items: flex-end;
+			justify-content: flex-end;
 			list-style: none;
+			flex-grow: 1;
 			margin: 1rem 0 0 0;
 			padding: 0;
 			align-self: flex-end;
@@ -3112,7 +3113,6 @@ input:focus {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	grid-gap: 3rem;
-
 }
 
 	.content.landing h2 {
@@ -3149,7 +3149,7 @@ input:focus {
 			right: 0;
 			left: 0;
 			bottom: 0;
-			padding: 2rem;
+			padding: 2rem 2rem 0;
 
 			color: var(--clr-key);
 			background: var(--clr-background-tr-bright);
@@ -3157,13 +3157,85 @@ input:focus {
 			font-size: 0.9rem;
 		}
 
+	.content.landing .featured .description .container {
+				display: grid;
+				grid-gap: 1rem;
+
+				height: 100%;
+				overflow: hidden;
+				background: linear-gradient(to bottom, var(--clr-key) calc(100% - 2.5rem), transparent 100%);
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+			}
+
 	.content.landing .featured .description h3 {
 				text-align: center;
 				font-size: 1.2rem;
+				margin: 0;
+			}
+
+	.content.landing .featured .description dt {
+				font-weight: bold;
+				margin: 0;
+			}
+
+	.content.landing .featured .description p {
+				margin: 0;
 			}
 
 	.content.landing .featured:hover .description {
 			display: block;
+		}
+
+	.content.landing .updates ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+	.content.landing .updates ul li {
+				font-size: 0.8rem;
+				line-height: 1.5;
+				width: calc(50% - 0.5rem);
+				margin: 0 0.5rem 0.25rem 0;
+				display: grid;
+				grid-template-columns: 25% 75%;
+				grid-gap: 0.5rem;
+			}
+
+	.content.landing .updates ul li img {
+					grid-column: 1;
+					width: 100%;
+					height: auto;
+				}
+
+	.content.landing .updates ul li a {
+					display: block;
+				}
+
+	.content.landing .updates ul li .info {
+					grid-column: 2;
+				}
+
+	.content.landing .updates ul li .info a, .content.landing .updates ul li .info div {
+						display: block;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						width: 100%;
+					}
+
+	.content.landing .updates ul li .info .name {
+						font-weight: bold;
+					}
+
+	.content.landing .updates .full-list {
+			display: block;
+			margin-top: 1rem;
+			text-align: center;
+
 		}
 
 	.content.landing .trending .carousel {
@@ -3197,6 +3269,7 @@ input:focus {
 			list-style: none;
 			margin: 0;
 			padding: 0;
+
 		}
 
 	.content.landing .recent ul li {
@@ -3241,4 +3314,10 @@ input:focus {
 	.content.landing .recent ul li .date {
 					grid-column: 5;
 				}
+
+	.content.landing .recent .full-list {
+			display: block;
+			margin-top: 1rem;
+			text-align: center;
+		}
 /* Page specific */

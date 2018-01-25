@@ -3023,9 +3023,9 @@ input:focus {
 	}
 
 .header .search input {
-			flex-grow: 0;
-			min-width: 600px;
-			max-width: 90%;
+			flex-grow: 1;
+			max-width: 600px;
+			margin-left: 10%;
 		}
 
 .header .title-controls {
@@ -3051,6 +3051,13 @@ input:focus {
 .header .title-controls h1:hover {
 				color: var(--clr-rnd-1);
 				animation: colorwheel 1.5s infinite;
+			}
+
+@media (max-width: 800px) {
+
+.header .title-controls h1 {
+				font-size: 8vw
+		}
 			}
 
 .header .title-controls ul {
@@ -3154,7 +3161,7 @@ input:focus {
 			color: var(--clr-key);
 			background: var(--clr-background-tr-bright);
 			text-decoration: none;
-			font-size: 0.9rem;
+			font-size: 0.8rem;
 		}
 
 	.content.landing .featured .description .container {
@@ -3174,10 +3181,18 @@ input:focus {
 				margin: 0;
 			}
 
-	.content.landing .featured .description dt {
-				font-weight: bold;
+	.content.landing .featured .description dl {
 				margin: 0;
 			}
+
+	.content.landing .featured .description dt {
+				font-weight: bold;
+				margin: 0.5rem 0 0.25rem;
+			}
+
+	.content.landing .featured .description dt:first-child {
+					margin-top: 0;
+				}
 
 	.content.landing .featured .description p {
 				margin: 0;
@@ -3320,4 +3335,23 @@ input:focus {
 			margin-top: 1rem;
 			text-align: center;
 		}
+
+@media (max-width: 1099px) {
+	.content.landing {
+		display: block;
+	}
+
+		.content.landing .sidebar {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 3rem;
+		}
+
+			.content.landing .sidebar .featured {
+				grid-column: 1;
+			}
+			.content.landing .sidebar .updates {
+				grid-column: 2;
+			}
+}
 /* Page specific */

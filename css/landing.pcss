@@ -40,7 +40,7 @@
 			color: var(--clr-key);
 			background: var(--clr-background-tr-bright);
 			text-decoration: none;
-			font-size: 0.9rem;
+			font-size: 0.8rem;
 
 			.container {
 				display: grid;
@@ -58,9 +58,15 @@
 				font-size: 1.2rem;
 				margin: 0;
 			}
+			dl {
+				margin: 0;
+			}
 			dt {
 				font-weight: bold;
-				margin: 0;
+				margin: 0.5rem 0 0.25rem;
+				&:first-child {
+					margin-top: 0;
+				}
 			}
 			p {
 				margin: 0;
@@ -193,6 +199,25 @@
 			display: block;
 			margin-top: 1rem;
 			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 1099px) {
+	.content.landing {
+		display: block;
+
+		.sidebar {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 3rem;
+
+			.featured {
+				grid-column: 1;
+			}
+			.updates {
+				grid-column: 2;
+			}
 		}
 	}
 }

@@ -21,9 +21,9 @@ body {
 		justify-content: flex-end;
 		align-items: center;
 		input {
-			flex-grow: 0;
-			min-width: 600px;
-			max-width: 90%;
+			flex-grow: 1;
+			max-width: 600px;
+			margin-left: 10%;
 		}
 	}
 	.title-controls {
@@ -46,6 +46,9 @@ body {
 			&:hover {
 				color: var(--clr-rnd-1);
 				animation: colorwheel 1.5s infinite;
+			}
+			@media (max-width: 800px) {
+				font-size: 8vw;
 			}
 		}
 
